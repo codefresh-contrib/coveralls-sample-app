@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^14.14.8",
+    "coveralls": "^3.1.0",
     "jest": "^26.6.3",
     "source-map-support": "^0.5.19",
     "ts-jest": "^26.4.4",
@@ -13,7 +14,7 @@
     "typescript-coverage-report": "^0.3.1"
   },
   "scripts": {
-    "test": "jest --ci --coverage",
+    "test": "jest --coverage && coveralls < coverage/lcov.info",
     "start:dev": "nodemon",
     "build": "tsc -p . --sourcemap",
     "start": "node build/index.js"
